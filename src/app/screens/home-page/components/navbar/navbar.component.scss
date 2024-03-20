@@ -1,0 +1,21 @@
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 20px;
+
+  .logo {
+    width: 140px;
+  }
+
+  .links {
+    display: flex;
+
+    .link {
+      margin: 10px;
+      font-size: 13px;
+      cursor: pointer;
+      color: gray;
+    }
+  }
+}

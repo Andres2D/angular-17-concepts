@@ -1,1 +1,15 @@
-<p>navbar works!</p>
+<nav class="navbar">
+  <img 
+    class="logo"
+    [src]="navbar.brandLogoUrl" 
+    [alt]="navbar.brandLogoUrl"
+  />
+  <ul class="links">
+    @for (option of navbar.navigationOptions; track option.title) {
+      <li class="link">
+        {{ option.title | uppercase }}
+      </li>
+    }
+  </ul>
+  <button>Build my office</button>
+</nav>
