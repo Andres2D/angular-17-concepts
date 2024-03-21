@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { navbar } from '../../../../constants/home.contants';
+import { CounterService } from '../../../../services/counter.service';
 
 @Component({
   selector: 'app-navbar',
@@ -8,4 +9,14 @@ import { navbar } from '../../../../constants/home.contants';
 })
 export class NavbarComponent {
   navbar = navbar;
+
+  officeCounter: string = 'Build My Office';
+
+  constructor(private counterService: CounterService) {}
+
+  ngOnInit(): void {
+    this.counterService.officeCounter.subscribe(value => {
+      this.officeCounter = `Build My Office (${value})`
+    });
+  }
 }

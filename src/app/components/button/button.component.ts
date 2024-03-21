@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-button',
@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrl: './button.component.scss'
 })
 export class ButtonComponent {
+  @Input() label: string = 'click me';
+  @Input() redirectTo: string = '#';
+  @Input() isExternal?: boolean;
+  @Output() action: EventEmitter<void> = new EventEmitter();
 
+  emitAction(): void {
+    this.action.emit();
+  }
 }
