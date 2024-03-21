@@ -7,6 +7,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { PropertyComponent } from './components/property/property.component';
 import { ButtonComponent } from '../../components/button/button.component';
 import { CounterService } from '../../services/counter.service';
+import { DogsService } from '../../services/dogs.service';
 
 @NgModule({
   imports: [
@@ -21,7 +22,8 @@ import { CounterService } from '../../services/counter.service';
     ButtonComponent
   ],
   providers: [
-    CounterService
+    CounterService,
+    DogsService
   ]
 })
 export class HomePageModule {}

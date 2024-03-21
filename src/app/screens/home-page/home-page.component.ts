@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { CounterService } from '../../services/counter.service';
+import { DogsService } from '../../services/dogs.service';
 
 @Component({
   selector: 'app-home-page',
@@ -19,9 +20,22 @@ export class HomePageComponent {
     rePassword: new FormControl('')
   });
 
+  duckImage: string = '';
+
   constructor(
-    private counterService: CounterService
+    private counterService: CounterService,
+    private dogsService: DogsService
   ) {}
+
+  ngOnInit(): void {
+    this.getDogImage();
+  }
+
+  getDogImage(): void {
+    this.dogsService.getDogs().subscribe(dog => {
+      this.duckImage = dog;
+    });
+  }
 
   addCounter() {
     this.counterService.addCounter();

@@ -50,4 +50,11 @@
   </div>
   <button type="submit">Submit</button>
 </form>
+
+<section>
+  @if(duckImage && duckImage !== '') {
+    <img class="image" [src]="duckImage" alt="random-duck" />
+  }
+  <button (click)="getDogImage()">Get new duck Image</button>
+</section>
 <br><br><br><br><br><br><br><br><br><br>

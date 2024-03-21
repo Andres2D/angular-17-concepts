@@ -37,3 +37,9 @@
     flex-direction: column;
   }
 }
+
+.image {
+  width: 450px;
+  height: 450px;
+  object-fit: cover;
+}
