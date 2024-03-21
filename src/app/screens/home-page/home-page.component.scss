@@ -43,3 +43,21 @@
   height: 450px;
   object-fit: cover;
 }
+
+.props {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+  .title {
+    margin: 40px;
+  }
+  
+  .props-list {
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+}

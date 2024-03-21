@@ -8,6 +8,7 @@ import { PropertyComponent } from './components/property/property.component';
 import { ButtonComponent } from '../../components/button/button.component';
 import { CounterService } from '../../services/counter.service';
 import { DogsService } from '../../services/dogs.service';
+import { PropTemplateComponent } from './components/prop-template/prop-template.component';
 
 @NgModule({
   imports: [
@@ -19,7 +20,8 @@ import { DogsService } from '../../services/dogs.service';
     HomePageComponent,
     NavbarComponent,
     PropertyComponent,
-    ButtonComponent
+    ButtonComponent,
+    PropTemplateComponent
   ],
   providers: [
     CounterService,
