@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import { DogsService } from './services/dogs.service';
 
 @NgModule({
   imports: [ 
@@ -11,7 +12,7 @@ import { AppRoutingModule } from './app-routing.module';
     HttpClientModule
   ],
   declarations: [AppComponent],
-  providers: [],
+  providers: [DogsService],
   bootstrap: [AppComponent],
 })
 export class AppModule { }

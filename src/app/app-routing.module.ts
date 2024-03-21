@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { privateRegisterGuard } from './guards/private-register.guard';
+import { registerResolver } from './resolvers/register-resolver.resolver';
 
 export const routes: Routes = [
   {
@@ -10,6 +11,7 @@ export const routes: Routes = [
   {
     path: 'register',
     canActivate: [privateRegisterGuard],
+    resolve: [registerResolver],
     loadChildren: () => import('./screens/register-page/register-page.module').then(m => m.RegisterPageModule)
   },
   {
