@@ -1,5 +1,5 @@
 <app-navbar />
-<section class="intro">
+<!-- <section class="intro">
   <div class="hero">
     <div class="content">
       <h2>Office Furniture <br> Made Easy</h2>
@@ -15,4 +15,39 @@
     </div>
     <img class="background" src="../../../assets/img/desktop.jpg" alt="kawasaki">
   </div>
-</section>
+</section> -->
+
+<br><br><br><br><br><br>
+
+<form 
+  class="form" 
+  (submit)="handleForm()"
+  [formGroup]="userForm"
+>
+  <div class="form-control">
+    <label for="">Fullname</label>
+    <input type="text" formControlName="fullName">
+  </div>
+
+  <div class="form-control">
+    <label for="">email</label>
+    <input type="text" formControlName="email">
+  </div>
+
+  <div class="form-control">
+    <label for="">Phone</label>
+    <input type="text" formControlName="phone">
+  </div>
+
+  <div class="form-control">
+    <label for="">password</label>
+    <input type="password" formControlName="password">
+  </div>
+
+  <div class="form-control">
+    <label for="">re-password</label>
+    <input type="password" formControlName="rePassword">
+  </div>
+  <button type="submit">Submit</button>
+</form>
+<br><br><br><br><br><br><br><br><br><br>

@@ -1,5 +1,6 @@
 import { NgModule } from "@angular/core";
 import { CommonModule } from '@angular/common';
+import { ReactiveFormsModule } from "@angular/forms";
 import { HomePageRoutingModule } from './home-page-routing.module';
 import { HomePageComponent } from './home-page.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -10,7 +11,8 @@ import { CounterService } from '../../services/counter.service';
 @NgModule({
   imports: [
     HomePageRoutingModule,
-    CommonModule
+    CommonModule,
+    ReactiveFormsModule
   ],
   declarations: [
     HomePageComponent,

@@ -24,3 +24,16 @@
   }
 
 }
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+
+  .form-control {
+    display: flex;
+    flex-direction: column;
+  }
+}

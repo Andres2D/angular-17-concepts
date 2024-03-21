@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { CounterService } from '../../services/counter.service';
 
 @Component({
@@ -8,9 +9,27 @@ import { CounterService } from '../../services/counter.service';
 })
 export class HomePageComponent {
 
-  constructor(private counterService: CounterService) {}
+  userForm: FormGroup = new FormGroup({
+    fullName: new FormControl(''),
+    email: new FormControl('', [
+      Validators.required
+    ]),
+    phone: new FormControl(''),
+    password: new FormControl(''),
+    rePassword: new FormControl('')
+  });
+
+  constructor(
+    private counterService: CounterService
+  ) {}
 
   addCounter() {
     this.counterService.addCounter();
+  }
+
+  handleForm(): void {
+    console.log('Handle form');
+    console.log(this.userForm.valid)
+    console.log(this.userForm.value);
   }
 }
